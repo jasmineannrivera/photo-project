@@ -3,6 +3,25 @@ body {
 }
 
 #image {
+	text-align: center;
+
 	display: flex;
 	justify-content: center;
+
+
 }
+
+#quote {
+	display: flex;
+	flex-direction: column;
+	background-color: black;
+	color: white;
+
+
+}
+
+img {
+	height: 50%;
+	width: 50%;
+}
+
