@@ -1,23 +1,9 @@
 body {
 	background-color: lightblue;
 }
-
-#image {
-	text-align: center;
-
+#image-row {
 	display: flex;
 	justify-content: center;
-
-
-}
-
-#quote {
-	display: flex;
-	flex-direction: column;
-	background-color: black;
-	color: white;
-
-
 }
 
 img {
