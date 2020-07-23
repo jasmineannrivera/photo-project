@@ -30,4 +30,5 @@ function getRandomInt(min, max) {
 
 $(".generate").click(function () {
     getQuote();
+    $("img").attr("src", "https://source.unsplash.com/featured/?nature");
 });
