@@ -14,9 +14,9 @@ const settings = {
 
 $.ajax(settings).done(function (response) {
     const data = JSON.parse(response);
-    console.log(data);
-    console.log(data[getRandomInt(0, 1642)]);
-    //1642 quotes available
+    console.log(data[getRandomInt(0, 1642)].text);
+
+    $("#quote").html('"' + data[getRandomInt(0,1642)].text + '"');
 });
 
 function getRandomInt(min, max) {
@@ -24,5 +24,3 @@ function getRandomInt(min, max) {
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
-
-console.log(getRandomInt(0, 1642));
