@@ -15,7 +15,6 @@ const settings = {
 function getQuote() {
     $.ajax(settings).done(function (response) {
         const data = JSON.parse(response);
-        console.log(data[getRandomInt(0, 1642)]);
         var quoteNumber = getRandomInt(0, 1642);
 
         $("#quote").html('"' + data[quoteNumber].text + '"');
