@@ -15,7 +15,7 @@ const settings = {
 $.ajax(settings).done(function (response) {
     const data = JSON.parse(response);
     console.log(data);
-    console.log(data[0]);
+    console.log(data[getRandomInt(0, 1642)]);
     //1642 quotes available
 });
 
