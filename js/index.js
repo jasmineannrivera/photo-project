@@ -10,19 +10,26 @@ const settings = {
     "crossDomain": true,
     "url": "https://type.fit/api/quotes",
     "method": "GET"
+};
+
+function getQuote() {
+    $.ajax(settings).done(function (response) {
+        const data = JSON.parse(response);
+        console.log(data[getRandomInt(0, 1642)]);
+        var quoteNumber = getRandomInt(0, 1642);
+
+        $("#quote").html('"' + data[quoteNumber].text + '"');
+        $("#author").html(data[quoteNumber].author)
+    });
 }
-
-$.ajax(settings).done(function (response) {
-    const data = JSON.parse(response);
-    console.log(data[getRandomInt(0, 1642)]);
-    var quoteNumber = getRandomInt(0,1642);
-
-    $("#quote").html('"' + data[quoteNumber].text + '"');
-    $("#author").html(data[quoteNumber].author)
-});
 
 function getRandomInt(min, max) {
     min = Math.ceil(min);
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
+
+$(".generate").click(function () {
+    getQuote();
+    console.log("hey");
+});
