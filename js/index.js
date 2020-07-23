@@ -30,5 +30,4 @@ function getRandomInt(min, max) {
 
 $(".generate").click(function () {
     getQuote();
-    console.log("hey");
 });
