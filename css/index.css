@@ -1,13 +1,17 @@
 body {
 	background-color: lightblue;
 }
-#image-row {
-	display: flex;
-	justify-content: center;
+.card {
+	margin: 1rem auto;
+	position: relative;
+	border: none;
 }
 
-img {
-	height: 500px;
-	width: 500px;
+.card-body {
+	z-index: 2;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-color: rgba(0,0,0,.5);
 }
-
