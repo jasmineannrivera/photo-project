@@ -29,7 +29,7 @@ function getRandomInt(min, max) {
 }
 
 $(".generate").click(function () {
-    var imgURL = "https://source.unsplash.com/featured/?nature";
+    const imgURL = "https://source.unsplash.com/featured/?nature";
     getQuote();
     $("img").attr("src", imgURL);
 });
