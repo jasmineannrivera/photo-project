@@ -12,7 +12,7 @@ const settings = {
     "method": "GET"
 };
 
-function getQuote() {
+const getQuote = () => {
     $.ajax(settings).done(function (response) {
         const data = JSON.parse(response);
         const quoteNumber = getRandomInt(0, 1642);
@@ -20,17 +20,18 @@ function getQuote() {
         $("#quote").html('"' + data[quoteNumber].text + '"');
         $("#author").html(data[quoteNumber].author)
     });
-}
+
 
 const getRandomInt = (min, max) => {
     min = Math.ceil(min);
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min + 1)) + min;
+}
 };
 
 
 $(".generate").click(function () {
-    const imgURL = "https://source.unsplash.com/featured/?nature";
+    const imgURL = "https://source.unsplash.com/featured/?nature/1600x900";
     getQuote();
     $("img").attr("src", imgURL);
 });
